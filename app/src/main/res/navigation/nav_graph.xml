@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.example.udemybootcampodev4.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/anasayfaToAGecis"
+            app:destination="@id/pageAFragment" />
+        <action
+            android:id="@+id/anasayfaToXGecis"
+            app:destination="@id/pageXFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pageAFragment"
+        android:name="com.example.udemybootcampodev4.PageAFragment"
+        android:label="fragment_page_a"
+        tools:layout="@layout/fragment_page_a" >
+        <action
+            android:id="@+id/pageAToBGecis"
+            app:destination="@id/pageBFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pageBFragment"
+        android:name="com.example.udemybootcampodev4.PageBFragment"
+        android:label="fragment_page_b"
+        tools:layout="@layout/fragment_page_b" >
+        <action
+            android:id="@+id/pageBToYGecis"
+            app:destination="@id/pageYFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pageXFragment"
+        android:name="com.example.udemybootcampodev4.PageXFragment"
+        android:label="fragment_page_x"
+        tools:layout="@layout/fragment_page_x" >
+        <action
+            android:id="@+id/pageXToYGecis"
+            app:destination="@id/pageYFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pageYFragment"
+        android:name="com.example.udemybootcampodev4.PageYFragment"
+        android:label="fragment_page_y"
+        tools:layout="@layout/fragment_page_y" >
+        <action
+            android:id="@+id/pageYToAnasayfaGecis"
+            app:destination="@id/anasayfaFragment" />
+    </fragment>
+</navigation>
